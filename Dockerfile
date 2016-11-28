@@ -25,7 +25,7 @@ RUN buildDeps='gnupg' HOME='/root' \
     && apk del --purge $buildDeps \
     && rm -rf /root/.gnupg \
     && rm -rf /var/cache/apk/* \
-    && npm install git2consul@0.12.12 --global \
+    && npm install git2consul@0.12.13 --global \
     && mkdir -p /git2consul/config \
     && curl -sfSL https://github.com/Yelp/dumb-init/releases/download/v${DUMBINIT_VERSION}/dumb-init_${DUMBINIT_VERSION}_amd64 -o /bin/dumb-init \
     && echo "$DUMBINIT_SHA256 */bin/dumb-init" | sha256sum -c - \
