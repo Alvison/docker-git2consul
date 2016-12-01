@@ -58,20 +58,12 @@ VerifyHostKeyDNS yes' \
 
 #### Ansible playbook
 
-`.ansible_vault_pass.sh`
-
-```bash
-#!/bin/bash
-
-echo $ANSIBLE_VAULT_PASS
-```
-
 `docker-git2consul.yml`
 
 ```yml
 ---
 # Example playbook command
-# ansible-playbook docker-git2consul.yml --vault-password-file ~/.ansible_vault_pass.sh
+# ansible-playbook -i inventory docker-git2consul.yml
 
 - hosts: docker-git2consul
   become: yes
