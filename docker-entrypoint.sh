@@ -37,4 +37,4 @@ if echo "$@" | grep -q "config"; then
         "$@"
 fi
 
-exec "$@"
+exec /usr/bin/node /usr/lib/node_modules/git2consul "$@"
